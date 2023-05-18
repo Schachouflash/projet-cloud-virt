@@ -18,11 +18,6 @@ RUN apt-get update \
 
 RUN pip install poetry \
     && poetry install
-#   && pip install . \
-#   && pip install gunicorn \
-#   && gunicorn --workers 4 --bind 0.0.0.0:8080 image_api.web:app
-
-
 
 # Exposez le port sur lequel l'application s'exécute
 EXPOSE 3000
