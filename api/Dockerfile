@@ -17,6 +17,5 @@ RUN pip install . \
 
 # Exposez le port sur lequel l'application s'exécute
 EXPOSE 8080 
-.
 # Démarrez l'application
 CMD ["/usr/local/bin/celery", "--app", "image_api.worker", "worker"]
