@@ -12,10 +12,6 @@ ENV AWS_SECRET_ACCESS_KEY=KRAkHnC65Cn7fwOBinzl
 # Copiez le contenu du répertoire actuel dans le répertoire de travail
 COPY . .
 
-RUN apt-get update \
-    && apt-get install -y curl\
-    && pip install --upgrade pip
-
 RUN pip install poetry \
     && pip install . \
     && poetry install
