@@ -17,10 +17,11 @@ RUN apt-get update \
     && pip install --upgrade pip
 
 RUN pip install poetry \
+    && pip install . \
     && poetry install
 
 # Exposez le port sur lequel l'application s'exécute
-EXPOSE 3000
+EXPOSE 3000 
 
 # Démarrez l'application
 CMD ["poetry", "run", "celery", "worker", "--app", "image_api.worker"]
