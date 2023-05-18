@@ -1,5 +1,5 @@
 # Utilisez une image de base avec Python
-FROM python:3.9
+FROM python:latest
 
 # Définition du répertoire de travail
 WORKDIR /usr/src/worker
