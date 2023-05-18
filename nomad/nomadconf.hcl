@@ -2,7 +2,7 @@ job "testcloud" {
   datacenters = ["montagne-verte"]
 
   group "testcloud" {
-    count = 2
+    count = 1
 
     network {
       port "frontend" {
@@ -22,11 +22,6 @@ job "testcloud" {
         ports = ["frontend"]
         args  = ["--port", "3000"]
       }
-
-      resources {
-        cpu    = 100
-        memory = 128
-      }
     }
 
     task "worker" {
@@ -37,10 +32,6 @@ job "testcloud" {
         args  = ["--port", "8080"]
       }
 
-      resources {
-        cpu    = 100
-        memory = 128
-      }
     }
   }
 }
