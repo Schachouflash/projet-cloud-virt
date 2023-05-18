@@ -1,4 +1,3 @@
-hcl
 job "testcloud" {
   datacenters = ["montagne-verte"]
 
