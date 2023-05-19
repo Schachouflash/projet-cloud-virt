@@ -17,7 +17,7 @@ job "testcloud" {
         image = "ghcr.io/schachouflash/frontend:latest"
         ports = ["frontend"]
         port_map {
-          frontend = {
+          frontend {
             static = 3000
           }
         }
