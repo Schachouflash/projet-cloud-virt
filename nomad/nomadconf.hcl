@@ -13,7 +13,7 @@ job "testcloud" {
     task "frontend" {
       driver = "docker"
       config {
-        image = "ghcr.io/schachouflash/frontend"
+        image = "ghcr.io/schachouflash/frontend:latest"
         ports = ["frontend"]
         port_map {
           frontend = 3000
