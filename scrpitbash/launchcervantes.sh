@@ -2,6 +2,8 @@ ssh -A cervantes # se connecter à cervantes
 rm -rf projet-cloud-virt
 git clone git@github.com:schachouflash/projet-cloud-virt.git
 
+network_interface = "vxlan100"
+
 sudo apt-get update
 sudo apt install keepalived -y
 
