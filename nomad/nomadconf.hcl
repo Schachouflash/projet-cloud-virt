@@ -13,7 +13,7 @@ job "testcloud" {
     task "frontend" {
       driver = "docker"
       config {
-        image = "ghrc.io/schachouflash/frontend"
+        image = "ghcr.io/schachouflash/frontend"
         ports = ["frontend"]
         port_map {
         frontend = {
@@ -37,7 +37,7 @@ group "worker" {
     task "worker" {
       driver = "docker"
       config {
-        image = "ghrc.io/schachouflash/worker-app"
+        image = "ghcr.io/schachouflash/worker-app"
         ports = ["worker"]
       }
 
