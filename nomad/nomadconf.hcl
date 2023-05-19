@@ -17,7 +17,7 @@ job "testcloud" {
         ports = ["frontend"]
         port_map {
           frontend = {
-            static= 3000
+            static = 3000
           }
         }
       }
