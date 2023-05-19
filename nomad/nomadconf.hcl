@@ -1,7 +1,7 @@
 job "testcloud" {
   datacenters = ["montagne-verte"]
 
-  group "frontend" {
+  group "frontends" {
     count = 1
 
     network {
@@ -24,7 +24,7 @@ job "testcloud" {
     }
   }
 
-group "worker" {
+group "workers" {
     count = 1
 
     network {
