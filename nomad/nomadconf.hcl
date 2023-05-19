@@ -18,7 +18,6 @@ job "testcloud" {
       }
     }
   }
-}
 
 group "worker" {
     count = 1
