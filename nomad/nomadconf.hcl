@@ -8,8 +8,9 @@ job "testcloud" {
       port "frontend" {
         static = 3000
         to = 3000
-        }
+      }
     }
+
     task "frontend" {
       driver = "docker"
       config {
@@ -24,14 +25,14 @@ job "testcloud" {
     }
   }
 
-group "workers" {
+  group "workers" {
     count = 1
 
     network {
       port "worker" {
         static = 8080
         to = 8080
-        }
+      }
     }
 
     task "worker" {
@@ -40,12 +41,11 @@ group "workers" {
         image = "ghcr.io/schachouflash/worker-app"
         ports = ["worker"]
       }
-
     }
   }
 
-group "haproxys"{
-    count=3
+  group "haproxys" {
+    count = 3
 
     network {
       port "haproxy" {
