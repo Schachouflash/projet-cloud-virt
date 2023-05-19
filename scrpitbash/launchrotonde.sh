@@ -7,8 +7,8 @@ sudo rm /etc/nomad.d/nomad.hcl
 sudo rm /etc/consul.d/consul.hcl
 
 #copier les nouveaux fichiers de configuration
-sudo cp ~/projet-cloud-virt/confignomadconsul/confconsulrotonde /etc/consul/consul.hcl
-sudo cp ~/projet-cloud-virt/confignomadconsul/confnomadrotonde /etc/nomad/nomad.hcl
+sudo cp ~/projet-cloud-virt/confignomadconsul/confconsulrotonde /etc/consul.d/consul.hcl
+sudo cp ~/projet-cloud-virt/confignomadconsul/confnomadrotonde /etc/nomad.d/nomad.hcl
 
 sudo systemctl restart nomad
 sudo systemctl restart consul
