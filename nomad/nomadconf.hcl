@@ -16,6 +16,7 @@ job "testcloud" {
       config {
         image = "ghcr.io/schachouflash/frontend:latest"
         ports = ["frontend"]
+        #portmap doesn't work here, i don't know why
       }
     }
   }
