@@ -15,6 +15,9 @@ job "testcloud" {
       config {
         image = "ghcr.io/schachouflash/frontend"
         ports = ["frontend"]
+        port_map {
+          frontend = 3000
+        }
       }
     }
   }
