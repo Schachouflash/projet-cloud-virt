@@ -11,7 +11,6 @@ job "testcloud" {
         }
     }
     task "frontend" {
-      count = 1
       driver = "docker"
       config {
         image = "ghrc.io/schachouflash/frontend"
